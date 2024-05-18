@@ -6,6 +6,7 @@ import cors from 'cors'
 import cookieParser from 'cookie-parser';
 import multer from "multer"
 import dotenv from 'dotenv';
+const PORT = process.env.PORT || 6010
 dotenv.config();
 const app = express();
 
@@ -44,7 +45,7 @@ app.use("/api/users", userRoutes)
 app.use("/api/posts", postRoutes)
 
 
-app.listen(8800, ()=>{
+app.listen(PORT, ()=>{
  console.log('server started hello');
 })
 
